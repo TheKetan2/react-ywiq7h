@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 const AddTransaction = 
-({transaction,handleTransaction}) 
+({handleTransaction}) 
 => {
   const [item,setItem] = useState("")
   const [amount, setAmount] = useState(0)
@@ -14,11 +14,7 @@ handleTransaction(
     }
 
    );
-console.log([...transaction,{
-        text: item,
-        amount: amount,
-        id: Math.floor(Math.random()*1000),
-    } ])
+
 setItem('');
 setAmount('');
 }
